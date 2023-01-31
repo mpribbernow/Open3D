@@ -103,6 +103,7 @@ if __name__ == "__main__":
         exit(1)
 
     sample_data = o3d.data.DemoCustomVisualization()
+    print(sample_data.render_option_path)
     pcd = o3d.io.read_point_cloud(sample_data.point_cloud_path)
     print("Customized visualization playing a camera trajectory. "
           "Press ctrl+z to terminate.")
