@@ -97,7 +97,8 @@ int ReadColorCallback(p_ply_argument argument) {
     long index;
     ply_get_argument_user_data(argument, reinterpret_cast<void **>(&state_ptr),
                                &index);
-    if (state_ptr->color_index >= state_ptr->color_num) {
+    if (state_ptr->color_index > state_ptr->color_num) {
+        utility::LogWarning("color index: {}, color: {}", state_ptr->color_index, state_ptr->color_num);
         return 0;
     }
 
