@@ -836,7 +836,7 @@ static int ply_read_list_property(p_ply ply, p_ply_element element,
     argument->value_index = -1;
     argument->value = length;
     if (read_cb && !read_cb(argument)) {
-        ply_ferror(ply, "Aborted by user");
+        ply_ferror(ply, "Aborted by user 1");
         return 0;
     }
     /* read list values */
@@ -853,7 +853,7 @@ static int ply_read_list_property(p_ply ply, p_ply_element element,
         }
         /* invoke callback to pass value */
         if (read_cb && !read_cb(argument)) {
-            ply_ferror(ply, "Aborted by user");
+            ply_ferror(ply, "Aborted by user 2");
             return 0;
         }
     }
